@@ -70,4 +70,64 @@ export default defineConfig([
     },
   },
 ])
+**# Manifest-Driven UI POC (Figma Replacement)*
+
+This repository contains a **proof-of-concept** for a manifest-driven UI renderer intended as a lightweight alternative to Figma for internal product design and iteration.
+
+The goal is **not** to replace engineering, but to let Product Owners and Analysts describe repeatable UI layouts in a structured, version-controlled way that renders pixel-consistently using the existing design system.
+
+---
+
+## What this is
+
+- A **read-only UI renderer**
+- Driven by a **JSON manifest**
+- Built with **React + Chakra (v3)** primitives
+- Designed for **desktop internal tooling**
+- Optimised for **highly repetitive enterprise screens**
+
+Typical use cases:
+- Case / workbench screens
+- Search + results layouts
+- Tabbed views with accordion detail sections
+- Internal admin / ops tooling
+
+---
+
+## What this is not
+
+- ❌ A visual drag-and-drop builder
+- ❌ A replacement for runtime UI logic
+- ❌ A form engine (yet)
+- ❌ A design system itself
+
+This POC deliberately avoids:
+- complex state management
+- data fetching
+- validation logic
+- accessibility hardening
+
+Those concerns belong in later phases.
+
+---
+
+## Why this exists
+
+In many internal applications:
+- Screens are **structurally identical**
+- Only labels, columns, and sections change
+- Figma designs quickly drift from implementation
+- Iteration requires hand-offs and rework
+
+This POC explores whether a **manifest → UI** approach can:
+- eliminate the Figma → dev translation step
+- keep layout definitions close to code
+- allow rapid iteration via pull requests
+- reuse the same renderer across multiple projects
+
+---
+
+## Architecture (POC level)
+
+
 ```
