@@ -1,0 +1,89 @@
+{
+  "tabs": [
+    {
+      "title": "Case Details",
+      "body": {
+        "type": "screen",
+        "searchPanelTitle": "Search",
+        "filtersPanelTitle": "Quick Filters",
+        "resultsTitle": "Results",
+        "results": {
+          "id": "results",
+          "sortableColumns": ["caseId", "name", "status", "openedDate"],
+          "columns": [
+            { "header": "Case ID", "field": "caseId" },
+            { "header": "Name", "field": "name" },
+            { "header": "Status", "field": "status" },
+            { "header": "Opened", "field": "openedDate" }
+          ],
+          "rows": [
+            { "caseId": "SIU-10001", "name": "Mary O'Brien", "status": "Open", "openedDate": "2025-12-01" },
+            { "caseId": "CICS-10002", "name": "John Murphy", "status": "Pending", "openedDate": "2025-12-12" },
+            { "caseId": "SIU-10003", "name": "Aoife Walsh", "status": "Closed", "openedDate": "2025-11-18" },
+            { "caseId": "CICS-10004", "name": "Declan Byrne", "status": "Open", "openedDate": "2026-01-02" },
+            { "caseId": "SIU-10005", "name": "Eoin Ryan", "status": "Pending", "openedDate": "2026-01-06" }
+          ]
+        },
+        "accordion": {
+          "items": [
+            {
+              "title": "General",
+              "table": {
+                "id": "general",
+                "sortableColumns": ["field", "value", "updated"],
+                "columns": [
+                  { "header": "Field", "field": "field" },
+                  { "header": "Value", "field": "value" },
+                  { "header": "Updated", "field": "updated" }
+                ],
+                "rows": [
+                  { "field": "Client", "value": "Optum", "updated": "2026-01-10" },
+                  { "field": "LOB", "value": "Claims", "updated": "2026-01-09" },
+                  { "field": "Mode", "value": "Read-only", "updated": "2026-01-08" }
+                ]
+              }
+            },
+            {
+              "title": "SIU",
+              "table": {
+                "id": "siu",
+                "sortableColumns": ["ref", "risk", "status", "owner"],
+                "columns": [
+                  { "header": "Ref", "field": "ref" },
+                  { "header": "Risk", "field": "risk" },
+                  { "header": "Status", "field": "status" },
+                  { "header": "Owner", "field": "owner" }
+                ],
+                "rows": [
+                  { "ref": "SIU-7781", "risk": "Medium", "status": "Open", "owner": "Analyst A" },
+                  { "ref": "SIU-7810", "risk": "High", "status": "Pending", "owner": "Analyst B" },
+                  { "ref": "SIU-7902", "risk": "Low", "status": "Closed", "owner": "Analyst C" }
+                ]
+              }
+            },
+            {
+              "title": "CICS",
+              "table": {
+                "id": "cics",
+                "sortableColumns": ["system", "queue", "state", "lastSeen"],
+                "columns": [
+                  { "header": "System", "field": "system" },
+                  { "header": "Queue", "field": "queue" },
+                  { "header": "State", "field": "state" },
+                  { "header": "Last Seen", "field": "lastSeen" }
+                ],
+                "rows": [
+                  { "system": "CICS-A", "queue": "Q12", "state": "Active", "lastSeen": "2026-01-10 09:12" },
+                  { "system": "CICS-B", "queue": "Q04", "state": "Idle", "lastSeen": "2026-01-10 08:47" },
+                  { "system": "CICS-A", "queue": "Q12", "state": "Active", "lastSeen": "2026-01-10 09:13" }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    { "title": "Inventory", "body": { "type": "placeholder" } },
+    { "title": "Settings", "body": { "type": "placeholder" } }
+  ]
+}
